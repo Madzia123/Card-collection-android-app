@@ -13,13 +13,6 @@ open class BaseFragment : Fragment() {
 
     protected var navigate: NavController? = null
 
-    protected var toolbarIsBackView: Boolean = false
-        set(value) {
-            field = value
-            toolbarInteraction?.showToolbarTitle(value)
-        }
-
-
     protected var toolbarVisible: Boolean = false
         set(value) {
             field = value

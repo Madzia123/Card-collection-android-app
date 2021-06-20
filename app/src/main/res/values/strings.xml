@@ -20,5 +20,8 @@
         <item>@string/inglot</item>
         <item>@string/deichmann_plus</item>
     </string-array>
-    
+
+
+    <string name="list_card">Lista kart</string>
+
 </resources>
