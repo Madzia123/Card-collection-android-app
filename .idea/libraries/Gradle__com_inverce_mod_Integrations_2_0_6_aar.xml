@@ -1,12 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.inverce.mod:Integrations:2.0.6@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f3bc02719cee47827793de2e35d67044/jetified-Integrations-2.0.6/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f3bc02719cee47827793de2e35d67044/jetified-Integrations-2.0.6/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f3bc02719cee47827793de2e35d67044/jetified-Integrations-2.0.6/jars/classes.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3ef86bb649147906ce44454881dbd539/jetified-Integrations-2.0.6/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3ef86bb649147906ce44454881dbd539/jetified-Integrations-2.0.6/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3ef86bb649147906ce44454881dbd539/jetified-Integrations-2.0.6/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7caa95aa382340c8407331e57378890f/jetified-Integrations-2.0.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7caa95aa382340c8407331e57378890f/jetified-Integrations-2.0.6/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7caa95aa382340c8407331e57378890f/jetified-Integrations-2.0.6/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.inverce.mod/Integrations/2.0.6/e65e447916597d7ecd41dec46afc5bcc4a1bea63/Integrations-2.0.6-javadoc.jar!/" />
