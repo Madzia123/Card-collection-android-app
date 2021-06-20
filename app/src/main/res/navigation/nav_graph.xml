@@ -6,5 +6,13 @@
     <fragment
         android:id="@+id/nav_splash_screen"
         android:name="com.magdalena.cardcollection.ui.splashScreen.SplashScreenFragment"
-        android:label="SplashScreenFragment" />
+        android:label="SplashScreenFragment" >
+        <action
+            android:id="@+id/nav_splash_screen_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.magdalena.cardcollection.ui.home.HomeFragment"
+        android:label="HomeFragment" />
 </navigation>

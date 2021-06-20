@@ -3,6 +3,7 @@ package com.magdalena.cardcollection
 import android.app.Application
 import com.magdalena.cardcollection.inject.AppComponent
 import com.magdalena.cardcollection.inject.ContextModule
+import com.magdalena.cardcollection.inject.DaggerAppComponent
 
 
 class App : Application() {

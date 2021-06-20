@@ -8,6 +8,9 @@ interface CardDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertCard(card: Card)
 
+    @Query("SELECT * FROM card")
+    fun getListCard(): MutableList<Card>
+
     @Update
     fun updateCard(card: Card)
 
