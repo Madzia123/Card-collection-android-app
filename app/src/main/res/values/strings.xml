@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">CardCollection</string>
+
+    <string name="hebe">hebe</string>
+    <string name="ladybug">Moja Biedronka</string>
+    <string name="spolem_bialystok">PSS Społem Białysok</string>
+    <string name="yves_rocher">YVES ROCHER FRANCE</string>
+    <string name="my_empik">moj empik</string>
+    <string name="super_pharm">SUPER-PHARM</string>
+    <string name="inglot">INGLOT</string>
+    <string name="deichmann_plus">deichmann plus</string>
+    
+    <string-array name="choose_card">
+        <item>@string/hebe</item>
+        <item>@string/ladybug</item>
+        <item>@string/spolem_bialystok</item>
+        <item>@string/yves_rocher</item>
+        <item>@string/my_empik</item>
+        <item>@string/super_pharm</item>
+        <item>@string/inglot</item>
+        <item>@string/deichmann_plus</item>
+    </string-array>
+    
+</resources>

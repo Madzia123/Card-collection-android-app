@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.inverce.mod:Events:2.0.6@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1e9e5907a0a344694a61f7fdb5476985/jetified-Events-2.0.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1e9e5907a0a344694a61f7fdb5476985/jetified-Events-2.0.6/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1e9e5907a0a344694a61f7fdb5476985/jetified-Events-2.0.6/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.inverce.mod/Events/2.0.6/491be93a6d9de780abecfd222e00df8a3086db6a/Events-2.0.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.inverce.mod/Events/2.0.6/7b85b4196f7fe6112b300977c19a59cd91d4479a/Events-2.0.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

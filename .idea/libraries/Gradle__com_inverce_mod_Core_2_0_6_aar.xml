@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: com.inverce.mod:Core:2.0.6@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/535f21af95443387a981029e1b3ac479/jetified-Core-2.0.6/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/535f21af95443387a981029e1b3ac479/jetified-Core-2.0.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/535f21af95443387a981029e1b3ac479/jetified-Core-2.0.6/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b3c02867a9c7f9424153fe907da46eeb/jetified-Core-2.0.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b3c02867a9c7f9424153fe907da46eeb/jetified-Core-2.0.6/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b3c02867a9c7f9424153fe907da46eeb/jetified-Core-2.0.6/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.inverce.mod/Core/2.0.6/ea81f22ee18dfd370e1045f623490624f8695958/Core-2.0.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.inverce.mod/Core/2.0.6/ef3513828357c0f66cb4694f761061e138a1b145/Core-2.0.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
