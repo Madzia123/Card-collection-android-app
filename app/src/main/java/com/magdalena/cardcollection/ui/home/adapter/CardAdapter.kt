@@ -81,6 +81,11 @@ class CardAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         notifyDataSetChanged()
     }
 
+    fun listCard(cards : MutableList<CardItem>){
+        items.addAll(cards)
+        notifyDataSetChanged()
+    }
+
 
     fun groupCategory(groupSection: Map<String, List<Card>>) {
         for (header in groupSection.keys) {

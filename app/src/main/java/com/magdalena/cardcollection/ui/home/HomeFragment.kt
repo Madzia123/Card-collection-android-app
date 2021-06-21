@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.magdalena.cardcollection.R
@@ -32,6 +33,15 @@ class HomeFragment : BaseFragment(), CardListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setRecycleView()
+        setViewObserve()
+    }
+
+    private fun setViewObserve() {
+        viewModel.cards.observe(
+            viewLifecycleOwner, Observer {
+                cardAdapter.listCard(it)
+            }
+        )
     }
 
     private fun setRecycleView() {
@@ -49,7 +59,7 @@ class HomeFragment : BaseFragment(), CardListener {
         toolbarTitle = getString(R.string.list_card)
     }
 
-    override fun setFavoriteCard(isFavoriteCard: Boolean, cardId: Long) {
+    override fun setFavoriteCard(isFavoriteCard: Boolean, cardId: Long?) {
         viewModel.setFavoriteCard(isFavoriteCard, cardId)
     }
 }
