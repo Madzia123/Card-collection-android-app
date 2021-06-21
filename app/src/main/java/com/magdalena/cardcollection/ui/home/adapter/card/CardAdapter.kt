@@ -1,4 +1,4 @@
-package com.magdalena.cardcollection.ui.home.adapter
+package com.magdalena.cardcollection.ui.home.adapter.card
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,7 +9,9 @@ import com.magdalena.cardcollection.R
 import com.magdalena.cardcollection.database.Card
 import com.magdalena.cardcollection.databinding.ItemCardBinding
 import com.magdalena.cardcollection.databinding.ItemHeaderBinding
-import com.magdalena.cardcollection.ui.home.HomeFragment
+import com.magdalena.cardcollection.ui.home.adapter.CardItem
+import com.magdalena.cardcollection.ui.home.adapter.HeaderItem
+import com.magdalena.cardcollection.ui.home.adapter.Item
 import java.lang.ref.WeakReference
 
 class CardAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -67,6 +69,7 @@ class CardAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                     cardNumber.text = cardItem.card.numberCard
                     favoriteCard.setOnClickListener {
                         listener?.get()?.setFavoriteCard(isFavoriteCard, cardItem.card.id)
+                        notifyItemChanged(position)
                     }
                 }
             }

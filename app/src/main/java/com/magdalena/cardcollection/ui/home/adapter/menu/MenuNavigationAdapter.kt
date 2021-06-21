@@ -1,4 +1,4 @@
-package com.magdalena.cardcollection.ui.customView
+package com.magdalena.cardcollection.ui.home.adapter.menu
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -14,7 +14,11 @@ class MenuNavigationAdapter(val navigation: NavController) :
 
     override fun onBindViewHolder(holder: MenuViewHolder, item: MenuItem, position: Int) {
         holder.binding.apply {
-
+            menuIcon.setImageResource(item.icon)
+            menuText.setText(item.titleMenu)
+            itemContentView.setOnClickListener {
+                item.action(navigation)
+            }
         }
     }
 

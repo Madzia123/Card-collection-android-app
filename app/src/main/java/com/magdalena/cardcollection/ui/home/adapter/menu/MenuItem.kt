@@ -1,4 +1,4 @@
-package com.magdalena.cardcollection.ui.customView
+package com.magdalena.cardcollection.ui.home.adapter.menu
 
 import androidx.navigation.NavController
 

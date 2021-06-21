@@ -9,7 +9,7 @@
     <string name="super_pharm">SUPER-PHARM</string>
     <string name="inglot">INGLOT</string>
     <string name="deichmann_plus">deichmann plus</string>
-    
+
     <string-array name="choose_card">
         <item>@string/hebe</item>
         <item>@string/ladybug</item>
@@ -26,5 +26,11 @@
     <string name="add_card">Dodaj kartę</string>
     <string name="settings">Ustawienia</string>
     <string name="about_app">O aplikacji</string>
+    <string name="name_card">Nazwa Karty</string>
+    <string name="number_card">Numer Karty</string>
+    <string name="choose_category">Wybierz kategorie</string>
+    <string name="set_favorite_card">Moja ulubiona</string>
+    <string name="scan_card">Skanuj kartę</string>
+
 
 </resources>

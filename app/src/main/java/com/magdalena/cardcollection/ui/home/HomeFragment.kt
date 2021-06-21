@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.magdalena.cardcollection.R
 import com.magdalena.cardcollection.databinding.FragmentHomeBinding
 import com.magdalena.cardcollection.ui.base.BaseFragment
-import com.magdalena.cardcollection.ui.home.adapter.CardAdapter
-import com.magdalena.cardcollection.ui.home.adapter.CardListener
+import com.magdalena.cardcollection.ui.home.adapter.card.CardAdapter
+import com.magdalena.cardcollection.ui.home.adapter.card.CardListener
 
 class HomeFragment : BaseFragment(), CardListener {
 
