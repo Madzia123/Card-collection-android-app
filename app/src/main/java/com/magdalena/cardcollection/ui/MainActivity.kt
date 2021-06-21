@@ -22,10 +22,12 @@ import com.magdalena.cardcollection.databinding.ActivityMainBinding
 import com.magdalena.cardcollection.ui.base.NavigationInteraction
 import com.magdalena.cardcollection.ui.base.ToolbarInteraction
 import com.magdalena.cardcollection.ui.home.adapter.menu.MenuNavigationAdapter
+import com.magdalena.cardcollection.ui.home.adapter.menu.MenuNavigationListener
 import com.magdalena.cardcollection.utils.ItemsHelper
 
 
-class MainActivity : AppCompatActivity(), NavigationInteraction, ToolbarInteraction {
+class MainActivity : AppCompatActivity(), NavigationInteraction, ToolbarInteraction,
+    MenuNavigationListener {
 
     private lateinit var binding: ActivityMainBinding
 
@@ -61,6 +63,7 @@ class MainActivity : AppCompatActivity(), NavigationInteraction, ToolbarInteract
 
     private fun setRecycleView(){
         val menuAdapter = MenuNavigationAdapter(getNavigationController())
+        menuAdapter.setListenerMenu(this)
         binding.menuList.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = menuAdapter
@@ -74,6 +77,10 @@ class MainActivity : AppCompatActivity(), NavigationInteraction, ToolbarInteract
         } else {
             binding.drawerLayout.openDrawer(GravityCompat.END)
         }
+    }
+
+    override fun closeMenu() {
+        binding.drawerLayout.closeDrawer(GravityCompat.END)
     }
 
 }

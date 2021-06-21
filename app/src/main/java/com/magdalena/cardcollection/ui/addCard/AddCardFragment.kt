@@ -33,4 +33,9 @@ class AddCardFragment : BaseFragment() {
     }
 
 
+    override fun onResume() {
+        super.onResume()
+        toolbarTitle = getString(R.string.add_card)
+    }
+
 }

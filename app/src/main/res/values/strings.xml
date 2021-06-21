@@ -31,6 +31,9 @@
     <string name="choose_category">Wybierz kategorie</string>
     <string name="set_favorite_card">Moja ulubiona</string>
     <string name="scan_card">Skanuj kartę</string>
+    <string name="enter_card">Podaj nazwę karty</string>
 
+    <string name="enter_name_category">Podaj nazwę kategorii</string>
+    <string name="add_category">Dodaj kategorię</string>
 
 </resources>

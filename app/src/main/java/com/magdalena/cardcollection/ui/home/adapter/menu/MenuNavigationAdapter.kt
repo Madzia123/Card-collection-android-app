@@ -6,9 +6,16 @@ import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
 import com.magdalena.cardcollection.databinding.ItemMenuBinding
 import com.magdalena.cardcollection.ui.base.BaseRecyclerViewAdapter
+import java.lang.ref.WeakReference
 
 class MenuNavigationAdapter(val navigation: NavController) :
     BaseRecyclerViewAdapter<MenuItem, MenuNavigationAdapter.MenuViewHolder>() {
+
+    var listenerMenu: WeakReference<MenuNavigationListener>? = null
+
+    fun setListenerMenu(listener: MenuNavigationListener) {
+        this.listenerMenu = WeakReference(listener)
+    }
 
     class MenuViewHolder(val binding: ItemMenuBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -18,6 +25,7 @@ class MenuNavigationAdapter(val navigation: NavController) :
             menuText.setText(item.titleMenu)
             itemContentView.setOnClickListener {
                 item.action(navigation)
+                listenerMenu?.get()?.closeMenu()
             }
         }
     }
