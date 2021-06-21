@@ -18,6 +18,6 @@ interface CardDao {
     fun deleteCard(card: Card)
 
     @Query("UPDATE card SET isFavorite = :isFavorite WHERE id = :cardId")
-    fun isFavoriteCard(isFavorite: Boolean, cardId: Long)
+    fun isFavoriteCard(isFavorite: Boolean, cardId: Long?)
 
 }

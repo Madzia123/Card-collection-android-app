@@ -13,7 +13,7 @@ class HomeViewModel : BaseViewModel() {
     lateinit var categoryDatabaseManger: CardDatabaseManger
 
 
-    fun setFavoriteCard(isFavorite: Boolean, cardId: Long) {
+    fun setFavoriteCard(isFavorite: Boolean, cardId: Long?) {
         disposables.add(
             Observable.fromCallable {
                 categoryDatabaseManger.isFavoriteCard(cardId, isFavorite)
@@ -21,7 +21,6 @@ class HomeViewModel : BaseViewModel() {
                 .observeOn(AndroidSchedulers.mainThread()).subscribe({
 
                 }, {
-
 
                 })
         )

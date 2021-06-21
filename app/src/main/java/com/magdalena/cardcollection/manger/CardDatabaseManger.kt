@@ -16,6 +16,6 @@ class CardDatabaseManger(val dao: CardDao) {
 
     fun updateCard(card: Card) = dao.updateCard(card)
 
-    fun isFavoriteCard(cardId: Long, isFavoriteCard: Boolean) =
+    fun isFavoriteCard(cardId: Long?, isFavoriteCard: Boolean) =
         dao.isFavoriteCard(isFavoriteCard, cardId)
 }

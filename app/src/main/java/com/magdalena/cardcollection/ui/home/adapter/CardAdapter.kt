@@ -3,6 +3,9 @@ package com.magdalena.cardcollection.ui.home.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.inverce.mod.v2.core.context
+import com.magdalena.cardcollection.R
 import com.magdalena.cardcollection.database.Card
 import com.magdalena.cardcollection.databinding.ItemCardBinding
 import com.magdalena.cardcollection.databinding.ItemHeaderBinding
@@ -53,9 +56,18 @@ class CardAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                 val cardItem = items[position] as CardItem
                 val cardViewHolder = holder as CardViewHolder
                 cardViewHolder.binding.apply {
+                    val isFavoriteCard = !cardItem.card.isFavorite
+
+                    Glide.with(context)
+                        .load(cardItem.card.image)
+                        .into(cardImage)
+
+                    favoriteCard.setBackgroundResource(if (isFavoriteCard) R.drawable.ic_favorite else R.drawable.ic_un_favorite)
 
                     cardNumber.text = cardItem.card.numberCard
-
+                    favoriteCard.setOnClickListener {
+                        listener?.get()?.setFavoriteCard(isFavoriteCard, cardItem.card.id)
+                    }
                 }
             }
         }
