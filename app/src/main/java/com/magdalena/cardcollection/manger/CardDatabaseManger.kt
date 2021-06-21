@@ -15,4 +15,7 @@ class CardDatabaseManger(val dao: CardDao) {
     fun deleteCard(card: Card) = dao.deleteCard(card)
 
     fun updateCard(card: Card) = dao.updateCard(card)
+
+    fun isFavoriteCard(cardId: Long, isFavoriteCard: Boolean) =
+        dao.isFavoriteCard(isFavoriteCard, cardId)
 }

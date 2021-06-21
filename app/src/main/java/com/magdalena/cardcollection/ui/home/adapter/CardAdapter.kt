@@ -1,27 +1,36 @@
 package com.magdalena.cardcollection.ui.home.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.magdalena.cardcollection.R
 import com.magdalena.cardcollection.database.Card
+import com.magdalena.cardcollection.databinding.ItemCardBinding
+import com.magdalena.cardcollection.databinding.ItemHeaderBinding
+import com.magdalena.cardcollection.ui.home.HomeFragment
+import java.lang.ref.WeakReference
 
 class CardAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     var items: MutableList<Item> = mutableListOf()
 
+    var listener: WeakReference<CardListener>? = null
+
+    fun setListener(listener: CardListener) {
+        this.listener = WeakReference(listener)
+    }
+
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        when (viewType) {
+        return when (viewType) {
             TYPE_HEADER -> {
-                val view = LayoutInflater.from(parent.context)
-                    .inflate(R.layout.item_header, parent, false)
-                return HeaderViewHolder(view)
+                val binding =
+                    ItemHeaderBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                HeaderViewHolder(binding)
             }
             TYPE_CARD_ITEM -> {
-                val view = LayoutInflater.from(parent.context)
-                    .inflate(R.layout.item_card, parent, false)
-                return CardViewHolder(view)
+                val binding =
+                    ItemCardBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                CardViewHolder(binding)
             }
             else -> {
                 throw  RuntimeException("There is no type that matches the type $viewType. Make sure you are using view types correctly!")
@@ -32,17 +41,20 @@ class CardAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (holder.itemViewType) {
-            TYPE_HEADER ->{
+            TYPE_HEADER -> {
                 val headerItem = items[position] as HeaderItem
                 val headerHolder = holder as HeaderViewHolder
-                headerHolder.itemView.apply {
+                headerHolder.binding.apply {
 
                 }
+
             }
-            TYPE_CARD_ITEM ->{
+            TYPE_CARD_ITEM -> {
                 val cardItem = items[position] as CardItem
                 val cardViewHolder = holder as CardViewHolder
-                cardViewHolder.itemView.apply {
+                cardViewHolder.binding.apply {
+
+                    cardNumber.text = cardItem.card.numberCard
 
                 }
             }
@@ -58,7 +70,7 @@ class CardAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
 
-    fun groupCategory(groupSection: Map<String, List<Card>>){
+    fun groupCategory(groupSection: Map<String, List<Card>>) {
         for (header in groupSection.keys) {
             val headerItem = HeaderItem(header)
             items.add(headerItem)
@@ -77,8 +89,10 @@ class CardAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         }
     }
 
-    inner class HeaderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
-    inner class CardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    inner class HeaderViewHolder(val binding: ItemHeaderBinding) :
+        RecyclerView.ViewHolder(binding.root)
+
+    inner class CardViewHolder(val binding: ItemCardBinding) : RecyclerView.ViewHolder(binding.root)
 
 
     fun clearList() {
