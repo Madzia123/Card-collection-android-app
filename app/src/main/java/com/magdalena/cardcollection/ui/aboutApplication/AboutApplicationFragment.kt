@@ -1,29 +1,27 @@
-package com.magdalena.cardcollection.ui.addCard
+package com.magdalena.cardcollection.ui.aboutApplication
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.magdalena.cardcollection.databinding.FragmantAboutApplicationBinding
 import com.magdalena.cardcollection.databinding.FragmentAddCardBinding
-import com.magdalena.cardcollection.databinding.FragmentSplashScreenBinding
 import com.magdalena.cardcollection.ui.base.BaseFragment
 
-class AddCardFragment : BaseFragment() {
+class AboutApplicationFragment : BaseFragment() {
 
-    private lateinit var binding: FragmentAddCardBinding
-
+    private lateinit var binding: FragmantAboutApplicationBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentAddCardBinding.inflate(inflater, container, false)
+    ): View? {
+        binding = FragmantAboutApplicationBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
     }
-
 }

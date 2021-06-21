@@ -23,5 +23,8 @@
 
 
     <string name="list_card">Lista kart</string>
+    <string name="add_card">Dodaj kartę</string>
+    <string name="settings">Ustawienia</string>
+    <string name="about_app">O aplikacji</string>
 
 </resources>
