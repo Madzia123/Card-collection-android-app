@@ -7,6 +7,7 @@ import android.os.Bundle
 import androidx.annotation.ColorInt
 import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.Toolbar
+import androidx.core.view.GravityCompat
 import androidx.core.view.isVisible
 import androidx.navigation.NavController
 import androidx.navigation.Navigation.findNavController
@@ -30,7 +31,11 @@ class MainActivity : AppCompatActivity(), NavigationInteraction, ToolbarInteract
         setContentView(binding.root)
 
         binding.menu.setOnClickListener {
-
+            if (binding.drawerLayout.isDrawerOpen(GravityCompat.END)) {
+                binding.drawerLayout.closeDrawer(GravityCompat.END)
+            } else {
+                binding.drawerLayout.openDrawer(GravityCompat.END)
+            }
         }
     }
 
@@ -48,5 +53,14 @@ class MainActivity : AppCompatActivity(), NavigationInteraction, ToolbarInteract
         binding.titleView.text = toolbarTitle
     }
 
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        if (binding.drawerLayout.isDrawerOpen(GravityCompat.END)) {
+            binding.drawerLayout.closeDrawer(GravityCompat.END)
+        } else {
+            binding.drawerLayout.openDrawer(GravityCompat.END)
+        }
+    }
 
 }
