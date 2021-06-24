@@ -1,13 +1,19 @@
 package com.magdalena.cardcollection.ui.addCard
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.view.isVisible
+import com.google.zxing.integration.android.IntentIntegrator
 import com.magdalena.cardcollection.R
 import com.magdalena.cardcollection.databinding.FragmentAddCardBinding
 import com.magdalena.cardcollection.databinding.FragmentSplashScreenBinding
 import com.magdalena.cardcollection.ui.base.BaseFragment
+import com.magdalena.cardcollection.utils.value
 
 class AddCardFragment : BaseFragment() {
 
@@ -33,9 +39,9 @@ class AddCardFragment : BaseFragment() {
     }
 
 
-    override fun onResume() {
-        super.onResume()
-        toolbarTitle = getString(R.string.add_card)
-    }
+override fun onResume() {
+    super.onResume()
+    toolbarTitle = getString(R.string.add_card)
+}
 
 }

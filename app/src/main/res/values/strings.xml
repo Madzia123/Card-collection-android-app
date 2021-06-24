@@ -35,5 +35,7 @@
 
     <string name="enter_name_category">Podaj nazwę kategorii</string>
     <string name="add_category">Dodaj kategorię</string>
+    <string name="delete_card">Usuń kartę</string>
+    <string name="category_card">Kategoria Karty</string>
 
 </resources>
