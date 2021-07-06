@@ -12,7 +12,6 @@ class CardDatabaseManger(val dao: CardDao) {
 
     fun getCards() = dao.getListCard()
 
-
     fun getCardDetail(cardId: Long?) = dao.getCardDetail(cardId)
 
     fun deleteCard(card: Card) = dao.deleteCard(card)

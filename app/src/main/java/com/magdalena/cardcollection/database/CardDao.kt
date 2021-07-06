@@ -13,7 +13,7 @@ interface CardDao {
     fun getListCard(): MutableList<Card>
 
     @Query("SELECT * FROM card WHERE id =:cardId LIMIT 1")
-    fun getCardDetail(cardId: Long?): MutableLiveData<Card>
+    fun getCardDetail(cardId: Long?): Card
 
     @Update
     fun updateCard(card: Card)

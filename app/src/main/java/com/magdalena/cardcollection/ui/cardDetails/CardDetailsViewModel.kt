@@ -16,13 +16,10 @@ class CardDetailsViewModel:BaseViewModel() {
     fun getCardDetails(cardId:Long){
         disposables.add(
             Observable.fromCallable {
-                categoryDatabaseManger.
+                categoryDatabaseManger.getCardDetail(cardId)
             }.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread()).subscribe({
-                    it.forEach {
-                        cardItems.add(CardItem(it))
-                    }
-                    cards.value = cardItems
+
                 }, {
 
                 })

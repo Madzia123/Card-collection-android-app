@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.inverce.mod:Events:2.0.6@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c68e212917b7f3e48e33787e76daa514/jetified-Events-2.0.6/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c68e212917b7f3e48e33787e76daa514/jetified-Events-2.0.6/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c68e212917b7f3e48e33787e76daa514/jetified-Events-2.0.6/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/92fcc51c2657e872f4040bed35818295/jetified-Events-2.0.6/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/92fcc51c2657e872f4040bed35818295/jetified-Events-2.0.6/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/92fcc51c2657e872f4040bed35818295/jetified-Events-2.0.6/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.inverce.mod/Events/2.0.6/491be93a6d9de780abecfd222e00df8a3086db6a/Events-2.0.6-javadoc.jar!/" />
