@@ -1,8 +1,8 @@
 package com.magdalena.cardcollection.ui.home
 
 import androidx.lifecycle.MutableLiveData
-import com.magdalena.cardcollection.database.Card
 import com.magdalena.cardcollection.manger.CardDatabaseManger
+import com.magdalena.cardcollection.manger.CategoryDatabaseManger
 import com.magdalena.cardcollection.ui.base.BaseViewModel
 import com.magdalena.cardcollection.ui.home.adapter.CardItem
 import io.reactivex.Observable
@@ -13,7 +13,11 @@ import javax.inject.Inject
 class HomeViewModel : BaseViewModel() {
 
     @Inject
-    lateinit var categoryDatabaseManger: CardDatabaseManger
+    lateinit var categoryDatabaseManger: CategoryDatabaseManger
+
+
+    @Inject
+    lateinit var cardDatabaseManger: CardDatabaseManger
 
     val cards: MutableLiveData<MutableList<CardItem>> = MutableLiveData()
     val cardItems: MutableList<CardItem> = mutableListOf()
@@ -27,7 +31,7 @@ class HomeViewModel : BaseViewModel() {
 
         disposables.add(
             Observable.fromCallable {
-                categoryDatabaseManger.getCards()
+                cardDatabaseManger.getCards()
             }.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread()).subscribe({
                     it.forEach {
@@ -44,7 +48,7 @@ class HomeViewModel : BaseViewModel() {
     fun setFavoriteCard(isFavorite: Boolean, cardId: Long?) {
         disposables.add(
             Observable.fromCallable {
-                categoryDatabaseManger.isFavoriteCard(cardId, isFavorite)
+                cardDatabaseManger.isFavoriteCard(cardId, isFavorite)
             }.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread()).subscribe({
 

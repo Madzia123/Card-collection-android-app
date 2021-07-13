@@ -26,4 +26,9 @@ class AddCardViewModel :BaseViewModel(){
                 })
         )
     }
+
+
+    fun navigationToChooseCategory(){
+        navigate?.navigate(AddCardFragmentDirections.navAddCardToNavChooseCategory())
+    }
 }

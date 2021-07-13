@@ -106,6 +106,8 @@ class CardAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         return when (items[position]) {
             is HeaderItem -> TYPE_HEADER
             is CardItem -> TYPE_CARD_ITEM
+            else ->
+                TYPE_CARD_ITEM
         }
     }
 

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import com.inverce.mod.v2.core.onUi
 import com.magdalena.cardcollection.databinding.FragmentSplashScreenBinding
 import com.magdalena.cardcollection.ui.base.BaseFragment
 
@@ -28,11 +29,9 @@ class SplashScreenFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        Handler().postDelayed({
+        onUi(2000) {
             viewModel.navigationToListCard()
-        }, 700)
-
+        }
     }
 
 

@@ -12,11 +12,17 @@ object ItemsHelper {
         menuLists.add(MenuItem(R.drawable.ic_favorite, R.string.list_card, R.id.nav_home))
         menuLists.add(MenuItem(R.drawable.ic_favorite, R.string.add_card, R.id.nav_add_card))
         menuLists.add(MenuItem(R.drawable.ic_favorite, R.string.settings, R.id.nav_settings))
-        menuLists.add(MenuItem(R.drawable.ic_favorite, R.string.about_app, R.id.nav_about_application))
+        menuLists.add(
+            MenuItem(
+                R.drawable.ic_favorite,
+                R.string.about_app,
+                R.id.nav_about_application
+            )
+        )
         return menuLists
     }
 
-    fun categoryList() : MutableList<Category>{
+    fun categoryList(): MutableList<Category> {
         val categoryList: MutableList<Category> = mutableListOf()
         categoryList.add(Category(name = "Rozrywka"))
         categoryList.add(Category(name = "Sport"))

@@ -31,6 +31,7 @@ class AddCardFragment : BaseFragment() {
         savedInstanceState: Bundle?
     ): View? {
         viewModel = ViewModelProvider(this).get(AddCardViewModel::class.java)
+        viewModel.navigate = navigate
         _binding = FragmentAddCardBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
@@ -39,6 +40,9 @@ class AddCardFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.categoryCardInputLayout.setOnClickListener {
+            viewModel.navigationToChooseCategory()
+        }
 
         binding.setFavoriteCard.setOnClickListener {
             isFavoriteCard = !isFavoriteCard

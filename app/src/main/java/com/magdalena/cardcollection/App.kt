@@ -17,6 +17,11 @@ import javax.inject.Inject
 
 
 class App : Application() {
+    val disposables = CompositeDisposable()
+
+    @Inject
+    lateinit var categoryDatabaseManger: CategoryDatabaseManger
+
 
     companion object {
         lateinit var injector: AppComponent
@@ -30,5 +35,22 @@ class App : Application() {
             .build()
         injector.inject(this)
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
+        insetCategoryDatabase()
     }
+
+    private fun insetCategoryDatabase() {
+        disposables.add(
+            Observable.fromCallable {
+                categoryDatabaseManger.insetCategories(ItemsHelper.categoryList())
+            }.subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread()).subscribe({
+
+                }, {
+
+                })
+        )
+    }
+
+
 }

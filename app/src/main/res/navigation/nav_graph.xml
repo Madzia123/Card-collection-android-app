@@ -19,7 +19,14 @@
     <fragment
         android:id="@+id/nav_add_card"
         android:name="com.magdalena.cardcollection.ui.addCard.AddCardFragment"
-        android:label="AddCardFragment" />
+        android:label="AddCardFragment" >
+        <action
+            android:id="@+id/nav_add_card_to_nav_choose_category"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_add_card"
+            app:popUpToInclusive="true"
+            app:destination="@id/nav_choose_category" />
+    </fragment>
     <fragment
         android:id="@+id/nav_settings"
         android:name="com.magdalena.cardcollection.ui.settings.SettingsFragment"
@@ -28,4 +35,8 @@
         android:id="@+id/nav_about_application"
         android:name="com.magdalena.cardcollection.ui.aboutApplication.AboutApplicationFragment"
         android:label="AboutApplicationFragment" />
+    <fragment
+        android:id="@+id/nav_choose_category"
+        android:name="com.magdalena.cardcollection.ui.chooseCategory.ChooseCategoryFragment"
+        android:label="ChooseCategoryFragment" />
 </navigation>

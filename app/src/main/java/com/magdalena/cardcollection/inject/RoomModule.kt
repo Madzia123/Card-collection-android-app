@@ -8,6 +8,7 @@ import com.magdalena.cardcollection.database.CardDao
 import com.magdalena.cardcollection.database.CardRoomDatabase
 import com.magdalena.cardcollection.database.CategoryDao
 import com.magdalena.cardcollection.manger.CardDatabaseManger
+import com.magdalena.cardcollection.manger.CategoryDatabaseManger
 import com.magdalena.cardcollection.utils.CARD_DATABASE
 import dagger.Module
 import dagger.Provides
@@ -37,6 +38,10 @@ class RoomModule {
 
     @Provides
     fun providesCardDatabaseManger(dao: CardDao) = CardDatabaseManger(dao)
+
+
+    @Provides
+    fun providerCategoryDatabaseManger(dao: CategoryDao) = CategoryDatabaseManger(dao)
 
 
 }

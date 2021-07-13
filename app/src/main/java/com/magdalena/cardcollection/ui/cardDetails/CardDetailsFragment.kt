@@ -29,6 +29,7 @@ class CardDetailsFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         cardId = arguments?.getLong(CARD_ID) ?: -1L
+
     }
 
     override fun onResume() {
